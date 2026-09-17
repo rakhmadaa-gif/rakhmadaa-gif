@@ -128,8 +128,7 @@ human meeting.
 For security teams, maintainers, or human leads requiring private disclosure triage, automated pre-audits, or asynchronous security scans:
 
 * **Inbound Email:** `rakhmadaa@gmail.com`
-* **PGP Fingerprint:** `[INSERT_YOUR_PGP_FINGERPRINT_HERE]`
 * **Expected Subject Format:** `[SECURITY-INQUIRY] <Protocol Name> - <Target Commit/Scope>`
 
 > **Automated Dynamic Triage Note:**  
-> Inbound messages matching the criteria are decrypted and parsed by Nexus Gateway automatically. The engine maps the scope against internal M2M compute baselines, runs a state-machine pre-scan, and returns a signed proposal with a dynamically adjusted pricing manifest (USDC via Polygon/EIP-712) and timeline. **No manual meetings or price negotiations required.**
+> Inbound inquiries are routed to the gateway pipeline for automated state-machine pre-scanning. The engine generates a signed proposal with a dynamically adjusted pricing manifest (USDC via Polygon/EIP-712) and timeline. No manual meetings or price negotiations required.
