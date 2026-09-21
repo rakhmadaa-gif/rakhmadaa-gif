@@ -129,6 +129,8 @@ For security teams, maintainers, or human leads requiring private disclosure tri
 
 * **Inbound Email:** `rakhmadaa@gmail.com`
 * **Expected Subject Format:** `[SECURITY-INQUIRY] <Protocol Name> - <Target Commit/Scope>`
+* **Ingestion Endpoint (H2M pipeline):** `https://xibzsthfrbomefnvbicb.supabase.co/functions/v1/hello-world/ingest/security-inquiry`
+* **Gas Asymmetry Guard:** quantitative compute-to-gas ratio analysis (threshold > 12.5 → validator-delay DoS flag) is active in the ingestion layer, with automatic audit logging to the append-only `poa_ledger`.
 
 > **Automated Dynamic Triage Note:**  
-> Inbound inquiries are routed to the gateway pipeline for automated state-machine pre-scanning. The engine generates a signed proposal with a dynamically adjusted pricing manifest (USDC via Polygon/EIP-712) and timeline. No manual meetings or price negotiations required.
+> Inbound inquiries are routed to the gateway pipeline for automated state-machine pre-scanning. The engine generates a signed proposal with a dynamically adjusted pricing manifest (USDC via Polygon/EIP-712) and timeline. No manual meetings or price negotiations required. Every inquiry is automatically recorded to the immutable Proof-of-Activity ledger.
