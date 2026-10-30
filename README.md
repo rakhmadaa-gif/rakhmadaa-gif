@@ -16,7 +16,7 @@ failure *before* mainnet does.
 ## 🛰️ Nexus Core Gateway — The Engine Behind Every Contribution
 
 Every audit, PR, and advisory I ship is backed by the **Nexus Core Gateway** — a self-built
-verification pipeline (v4.3.0-frontier, live on Supabase Edge, registered on-chain as
+verification pipeline (v5.17.0-frontier, live on Supabase Edge, registered on-chain as
 **ERC-8004 Agent #636** on Polygon). It is not a wrapper around existing tools; it is a
 **Digital Twin engine** that reconstructs what the EVM will actually do:
 
@@ -101,6 +101,17 @@ abstract contract NexusSentinel is INexusSentinel {
 
 ## 📡 Selected Track Record
 
+- **[Protocol Reviews 7/7 — Oct 2026](https://github.com/rakhmadaa-gif/nexus-core-gateway)** — Tempo L1, EIP-7883
+  MODEXP repricing, Monad, Arbitrum Stylus, ZK rollups (zksync / Linea / Scroll / polygon-zkevm),
+  HyperEVM/Hyperliquid, Berachain. Every review came back negative for exploitable gas asymmetry — and every
+  one yielded a permanent engine correction: probe-verified chain-aware MODEXP gas regimes, precompile
+  availability verdicts, BS-014 Phantom Vote & BS-015 HyperCore porting-trap detectors.
+- **[Nexus Dependency Fitness — GitHub Marketplace](https://github.com/marketplace/actions/nexus-dependency-fitness)** —
+  factual dependency attestation as a CI action: GHSA/CVE via OSV, SPDX license risk, CycloneDX SBOM,
+  reachability verdicts. Every paid response carries an EIP-712 signed attestation (ERC-8004 Agent #636),
+  Merkle-anchored daily on Polygon with public zero-trust proof endpoints.
+- **Engine benchmark — Trail of Bits not-so-smart-contracts 8/8 recall** — including The DAO 2016 reentrancy
+  and SpankChain 2018 (Slither: 4/8). 15 breach scenarios live, $0.05–$3.50 per scan via x402/USDC.
 - **[Confetti — GHSA-3g9w-x8qp-2qpq](https://github.com/jk-labs-inc/confetti/security/advisories/GHSA-3g9w-x8qp-2qpq)** — phantom-vote reward theft (high severity); maintainer shipped the exact recommended fix **within 5 hours**, plus a regression test and version bump.
 - **[Solady — PR #1562](https://github.com/Vectorized/solady/pull/1562)** — two real bugs in `LibBytes` (`split` memory corruption via null-path scratch-pointer read; missing bounds check in `dynamicStructInCalldata`), fixed with a 5-test regression suite; 1,597/1,597 tests green.
 - **[tempo-std — PR #145](https://github.com/tempoxyz/tempo-std/pull/145)** — `flipV` parity-convention bug + full T12 ABI resync + `check-drift.py`, a cross-layer Rust↔Solidity ABI drift checker offered for CI integration.
